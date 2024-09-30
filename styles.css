@@ -1,0 +1,36 @@
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+}
+
+.illustration {
+    width: 600px; /* Default size for desktop */
+    transition: none; /* Disable transition for immediate effect */
+}
+
+/* Scale up on hover */
+.illustration:hover {
+    transform: scale(1.05); /* Scale up by 5% when hovered */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Change layout for mobile if needed */
+    }
+
+    .illustration {
+        width: 90vw; /* Responsive size for mobile */
+        max-width: none; /* Remove max-width for mobile */
+    }
+}
